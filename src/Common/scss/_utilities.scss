@@ -1,0 +1,13 @@
+/**
+  @function Color
+  @shortcut map-get for color by degree
+ */
+@function color($col, $degree : 500) {
+  $c : map-get($col, $degree);
+  
+  @if $c == null {
+    @return $_error-color;
+  }
+
+  @return $c;
+}
