@@ -1,0 +1,26 @@
+/* ********************************
+  Colors Objects
+  500 is the regular
+*/
+
+$_error-color : repeating-linear-gradient(to right,red,red 5px,transparent 5px,transparent 10px),rgb(255,200,200);
+
+$black : (
+  500 : #000,
+);
+
+$white : (
+  500 : #fff,
+);
+
+$grey : (
+  100 : #f2f2f2,
+  200 : #d8d8d8,
+  300 : #bfbfbf,
+  400 : #a6a6a6,
+  500 : #8c8c8c,
+  600 : #737373,
+  700 : #595959,
+  800 : #404040,
+  900 : #262626
+);
