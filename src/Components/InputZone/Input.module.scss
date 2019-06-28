@@ -1,0 +1,43 @@
+@import '../../Common/scss/abstract.scss';
+
+.file {
+  position: relative;
+  flex: 0;
+  z-index: 2;
+  box-shadow: 0 15px 19px color($grey,900);
+
+  input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: rem(20px) 0;
+
+    width: 100%;
+    transition: 0.2s ease-in-out;
+
+    p {
+      font-size: rem(25px);
+      margin: rem(5px) 0;
+      color: color($grey);
+    }
+
+    span {
+      font-size: rem(16px);
+      color: color($grey, 700);
+    }
+  }
+
+  &:hover {
+    label {
+      background: color($grey, 800);
+    }
+  }
+}

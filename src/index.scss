@@ -1,0 +1,14 @@
+@import "./Common/scss/abstract.scss";
+@import "./Common/scss/_reset";
+@import "./Common/scss/_fonts.scss";
+
+html {
+  font-size: $baseFontSize;
+}
+
+body {
+  font-family: Open sans;
+  font-weight: 100;
+  font-size: rem($baseFontSize);
+  color: color($grey);
+}

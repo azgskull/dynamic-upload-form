@@ -10,4 +10,22 @@
   }
 
   @return $c
+};
+
+/**
+  @function rem
+  
+ */
+@function rem($px) {
+  @return #{$px/$baseFontSize}rem;
+}
+
+/**
+
+ */
+@mixin removeWhiteSpace {
+  font-size: 0;
+  & > * {
+    font-size: rem($baseFontSize);
+  }
 }
