@@ -2,52 +2,47 @@
 
 .item {
   position: relative;
-  border-radius: rem(3px);
+  flex: 0 1 20%;
   overflow: hidden;
-  padding: rem(15px);
-  
-  @include removeWhiteSpace;
+
+  .r1x1 {
+    @extend %r1x1;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @extend %fullSize;
+    padding: rem(10px);
+
+    // display: flex;
+    align-items: center;
+
+  }
 
   img {
-    transition: 0.2s ease-in-out;
-    width: 100%;
+    object-fit: fill;
   }
 
   .controls {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 100%;
-    background: rgba(0,0,0,0.7);
+    text-align: center;
+  }
 
-    text-align: right;
-    i {
-      color: color($grey, 100);
-      font-size: rem(15px);
-      margin: rem(5px);
-      cursor: pointer;
+  i {
+    background: color($grey, 800);
+    color: color($grey, 600);
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover {
+      background: color($grey, 300);
+      color: color($grey, 900);
     }
-  }
-
-  &:hover {
-    img {
-      opacity: 0.8;
-    }
-  }
-
-  @media (max-width: 640px) {
-    flex: 0 1 100%;
-  }
-  @media (min-width: 641px) {
-    flex: 0 1 50%;
-  }
-  @media (min-width: 780px) {
-    flex: 0 1 33.3%;
-  }
-  @media (min-width: 1024px) {
-    flex: 0 1 25%;
-  }
-  @media (min-width: 1280px) {
-    flex: 0 1 10%;
   }
 }
