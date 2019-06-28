@@ -1,21 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import sass from './Input.module.scss';
 
-function Input({ addFilesAction }) {
-  let inputChangeHandler = (e) => {
+function Input({ addFilesAction, isListFull }) {
+  
+  let inputChangeHandler = e => {
     let files = e.target.files;
-    if(files.length > 0) {
-      addFilesAction(files)
+    if (files.length > 0) {
+      addFilesAction(files);
+      e.target.value = '';
     }
   };
 
+
+  useEffect(() => {
+
+  }, [isListFull]);
+
   return (
-    <div className={sass.file}>
+    <div className={[sass.file, isListFull ? sass.full : ''].join(' ')}>
       <input
         id="inputFileUpload"
         onChange={inputChangeHandler}
         type="file"
-        multiple accept=".jpg,.png,.gif"
+        multiple
+        accept=".jpg,.png,.gif"
       />
       <label htmlFor="inputFileUpload">
         <p>Drop Or click here to upload</p>

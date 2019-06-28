@@ -2,9 +2,15 @@
 
 .file {
   position: relative;
-  flex: 0;
+  flex: 0 0 100%;
   z-index: 2;
   box-shadow: 0 15px 19px color($grey,900);
+  display: flex;
+  align-items: center;
+
+  &.full {
+    flex: 0;
+  }
 
   input {
     opacity: 0;

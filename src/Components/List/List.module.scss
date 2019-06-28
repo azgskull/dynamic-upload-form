@@ -1,15 +1,13 @@
 @import '../../Common/scss/abstract.scss';
 
 .list {
-  position: relative;
-  flex: 1 1 100%;
+  flex: 1 0;
   overflow: auto;
-  width: 80%;
-  margin: 0 auto;
+  background: color($grey, 800);
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
 }

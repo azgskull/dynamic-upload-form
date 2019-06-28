@@ -2,14 +2,14 @@
   @function Color
   @shortcut map-get for color by degree
  */
-@function color($col, $degree : 500) {
+@function color($col, $degree : 500, $opacity : 1) {
   $c : map-get($col, $degree);
   
   @if $c == null {
     @return $_error-color;
   }
 
-  @return $c
+  @return rgba($c, $opacity)
 };
 
 /**
