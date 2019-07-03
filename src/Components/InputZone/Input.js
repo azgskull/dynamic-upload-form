@@ -4,10 +4,11 @@ import sass from './Input.module.scss';
 function Input({ addFilesAction, isListFull }) {
   
   let inputChangeHandler = e => {
-    let files = e.target.files;
+    let target = e.target
+    let files = target.files;
     if (files.length > 0) {
       addFilesAction(files);
-      e.target.value = '';
+      target.value = '';
     }
   };
 
